@@ -16,7 +16,7 @@ RUN curl --progress-bar -fsSL -o/tmp/hashes.txt https://www.getmonero.org/downlo
 # Platform to download monero for
 ARG MONERO_PLATFORM=linux-x64
 # Monero version
-ARG MONERO_VERSION=0.17.3.0
+ARG MONERO_VERSION=0.17.3.2
 
 RUN curl --progress-bar -fsSL -o/tmp/monero-${MONERO_PLATFORM}-v${MONERO_VERSION}.tar.bz2 https://downloads.getmonero.org/cli/monero-${MONERO_PLATFORM}-v${MONERO_VERSION}.tar.bz2 \
  && grep $(sha256sum /tmp/monero-${MONERO_PLATFORM}-v${MONERO_VERSION}.tar.bz2 | cut -c 1-64) /tmp/hashes.txt \
