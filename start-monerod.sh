@@ -19,8 +19,10 @@ if [ -n "$RUN_AS" ]; then
     --no-create-home \
     monero
 
-  # chown data directory
-  chown -R "$RUN_AS" data
+  if [[ "$MONERO_CHOWN" == "true" ]]; then
+    # chown data directory
+    chown -R "$RUN_AS" data
+  fi
 fi
 
 # Exec monerod
