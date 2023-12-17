@@ -1,7 +1,7 @@
 # [docker-monero](https://github.com/vtavernier/docker-monero)
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vtavernier/docker-monero/build)](https://github.com/vtavernier/docker-monero/actions/workflows/build.yaml)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vtavernier/docker-monero/update)](https://github.com/vtavernier/docker-monero/actions/workflows/update.yaml)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vtavernier/docker-monero/build.yaml)](https://github.com/vtavernier/docker-monero/actions/workflows/build.yaml)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vtavernier/docker-monero/update.yaml)](https://github.com/vtavernier/docker-monero/actions/workflows/update.yaml)
 
 This is a repository to build a Docker image of the
 [Monero](https://www.getmonero.org/) cryptocurrency tools. It is geared towards
