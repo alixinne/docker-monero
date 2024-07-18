@@ -20,13 +20,13 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: vtavernier
+          username: alixinne
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Compute Docker image tag
         run: |
           echo "::set-output name=tag::$(awk -F'[ =]' '/^ARG MONERO_VERSION/ {print $NF}' Dockerfile)"
-          echo "::set-output name=repository::ghcr.io/vtavernier/monero"
+          echo "::set-output name=repository::ghcr.io/alixinne/monero"
         id: image
 
       - name: Build and export Docker image

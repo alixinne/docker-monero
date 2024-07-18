@@ -40,8 +40,8 @@ jobs:
 
       - name: Prepare update commit
         run: |
-          git config --global user.name 'Vincent Tavernier'
-          git config --global user.email 'vtavernier@users.noreply.github.com'
+          git config --global user.name 'Alixinne'
+          git config --global user.email 'alixinne@users.noreply.github.com'
           sed -i 's/=${{ needs.check.outputs.current_release }}/=${{ needs.check.outputs.latest_release }}/' Dockerfile
           git commit -m 'Update monero to ${{ needs.check.outputs.latest_release }}' Dockerfile
 
@@ -51,7 +51,7 @@ jobs:
       - name: Compute Docker image tag
         run: |
           echo "::set-output name=tag::${{ needs.check.outputs.latest_release }}"
-          echo "::set-output name=repository::ghcr.io/vtavernier/monero"
+          echo "::set-output name=repository::ghcr.io/alixinne/monero"
         id: image
 
       - name: Build and export Docker image
